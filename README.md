@@ -12,7 +12,7 @@
 1. Clona el repositorio:
 
    ```bash
-   git clone <URL del repositorio>
+   git clone https://github.com/teamq-ec/teamq-aplicacion-senior-laravel-tommy-villagomez.git
 2. Instala las dependencias de Composer: `composer install`
 3. Crea una bd en tu gestor mysql, de nombre `api`
 4. Configura tu base de datos en el archivo `.env`.
