@@ -1,0 +1,533 @@
+openapi: 3.0.3
+info:
+    title: Laravel
+    description: ''
+    version: 1.0.0
+servers:
+    -
+        url: 'http://localhost'
+paths:
+    /sanctum/csrf-cookie:
+        get:
+            summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+    /api/login:
+        post:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+    '/api/v1/movies/{id}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+        delete:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+        patch:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                title:
+                                    type: string
+                                    description: ''
+                                    example: ullam
+                                description:
+                                    type: string
+                                    description: ''
+                                    example: vel
+                                year:
+                                    type: integer
+                                    description: ''
+                                    example: 4
+                            required:
+                                - title
+                                - year
+            security: []
+        put:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                title:
+                                    type: string
+                                    description: ''
+                                    example: praesentium
+                                description:
+                                    type: string
+                                    description: ''
+                                    example: commodi
+                                year:
+                                    type: integer
+                                    description: ''
+                                    example: 4
+                            required:
+                                - title
+                                - year
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: corrupti
+                required: true
+                schema:
+                    type: string
+    /api/v1/movies:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+        post:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                title:
+                                    type: string
+                                    description: ''
+                                    example: iste
+                                description:
+                                    type: string
+                                    description: ''
+                                    example: et
+                                year:
+                                    type: integer
+                                    description: ''
+                                    example: 11
+                            required:
+                                - title
+                                - year
+            security: []
+    '/api/v1/movies/{id}/images':
+        post:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: aut
+                required: true
+                schema:
+                    type: string
+    '/api/v1/movies/{id}/images/{imageId}':
+        patch:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: quaerat
+                required: true
+                schema:
+                    type: string
+            -
+                in: path
+                name: imageId
+                description: ''
+                example: neque
+                required: true
+                schema:
+                    type: string
+    /api/v1/users:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    data: [{ id: 1, name: 'Miss Maryam Marks', email: grogahn@example.net, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 2, name: 'Cortney Blanda', email: raphaelle66@example.com, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 3, name: 'Dr. Jules Stiedemann PhD', email: lillie43@example.net, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 4, name: 'Mrs. Nadia Davis', email: faustino09@example.com, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 5, name: 'Verla Wehner', email: ojerde@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 6, name: 'Sister Marquardt MD', email: nkertzmann@example.com, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 7, name: 'Peter Frami I', email: cartwright.albina@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 8, name: 'Kattie Stroman', email: dusty.schuster@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 9, name: 'Lorena Ebert', email: abdiel71@example.net, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 10, name: 'Ora Keeling', email: dkiehn@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 11, name: 'tommy villagomez', email: tommyjoel20@gmail.com, created_at: '2024-05-22T22:17:56.000000Z', updated_at: '2024-05-22T22:17:56.000000Z' }]
+                                    links: { first: 'http://localhost/api/v1/users?page=1', last: 'http://localhost/api/v1/users?page=1', prev: null, next: null }
+                                    meta: { current_page: 1, from: 1, last_page: 1, links: [{ url: null, label: '&laquo; Previous', active: false }, { url: 'http://localhost/api/v1/users?page=1', label: '1', active: true }, { url: null, label: 'Next &raquo;', active: false }], path: 'http://localhost/api/v1/users', per_page: 15, to: 11, total: 11 }
+                                properties:
+                                    data: { type: array, example: [{ id: 1, name: 'Miss Maryam Marks', email: grogahn@example.net, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 2, name: 'Cortney Blanda', email: raphaelle66@example.com, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 3, name: 'Dr. Jules Stiedemann PhD', email: lillie43@example.net, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 4, name: 'Mrs. Nadia Davis', email: faustino09@example.com, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 5, name: 'Verla Wehner', email: ojerde@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 6, name: 'Sister Marquardt MD', email: nkertzmann@example.com, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 7, name: 'Peter Frami I', email: cartwright.albina@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 8, name: 'Kattie Stroman', email: dusty.schuster@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 9, name: 'Lorena Ebert', email: abdiel71@example.net, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 10, name: 'Ora Keeling', email: dkiehn@example.org, created_at: '2024-05-15T18:42:41.000000Z', updated_at: '2024-05-15T18:42:41.000000Z' }, { id: 11, name: 'tommy villagomez', email: tommyjoel20@gmail.com, created_at: '2024-05-22T22:17:56.000000Z', updated_at: '2024-05-22T22:17:56.000000Z' }], items: { type: object } }
+                                    links: { type: object, example: { first: 'http://localhost/api/v1/users?page=1', last: 'http://localhost/api/v1/users?page=1', prev: null, next: null } }
+                                    meta: { type: object, example: { current_page: 1, from: 1, last_page: 1, links: [{ url: null, label: '&laquo; Previous', active: false }, { url: 'http://localhost/api/v1/users?page=1', label: '1', active: true }, { url: null, label: 'Next &raquo;', active: false }], path: 'http://localhost/api/v1/users', per_page: 15, to: 11, total: 11 } }
+            tags:
+                - Endpoints
+            security: []
+        post:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+    '/api/v1/users/{id}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                404:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: 'User not found'
+                                properties:
+                                    message: { type: string, example: 'User not found' }
+            tags:
+                - Endpoints
+            security: []
+        patch:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+        delete:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: voluptatem
+                required: true
+                schema:
+                    type: string
